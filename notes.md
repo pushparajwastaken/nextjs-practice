@@ -54,3 +54,17 @@ Server components are the preferred choice for data fetching in next.js
 -direct access to backend resources
 -and the ability to secure sensitive data
 Opt for client components for data fetching only when it's absolutely necessary such as when you need real-time updates or when the data depends on the client side interactions that can't be ppredicted server side
+
+Server Actions
+-they are asynchronous functions that are executed on the server
+-they allow us to define and execute server-side logic directly from our components
+-they're incredibly useful for handling form submissions,updating databases or any operation that requires server-side execution
+
+Authentication
+-sign up
+-sign in
+-sign out
+-manage account
+-show UI elements based on auth status
+-protect routes based on auth status
+-read session and user data
