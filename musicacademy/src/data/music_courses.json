@@ -1,0 +1,104 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "title": "Indian Classical Vocal Foundations",
+      "slug": "indian-classical-vocal-foundations",
+      "description": "Learn the basics of Hindustani classical vocal music, including swaras, alankars, and simple ragas.",
+      "price": 2500,
+      "instructor": "Pandit Bhimsen Joshi",
+      "isFeatured": true,
+      "image": "/images/courses/classical-vocal.png"
+    },
+    {
+      "id": 2,
+      "title": "Guitar for Beginners",
+      "slug": "guitar-for-beginners",
+      "description": "Start your guitar journey with chords, strumming patterns, and popular songs.",
+      "price": 2000,
+      "instructor": "Eric Clapton",
+      "isFeatured": true,
+      "image": "/images/courses/guitar-beginners.png"
+    },
+    {
+      "id": 3,
+      "title": "Piano & Keyboard Essentials",
+      "slug": "piano-keyboard-essentials",
+      "description": "Understand piano basics, scales, hand coordination, and simple melodies.",
+      "price": 2800,
+      "instructor": "Ludovico Einaudi",
+      "isFeatured": false,
+      "image": "/images/courses/piano.png"
+    },
+    {
+      "id": 4,
+      "title": "Advanced Tabla Techniques",
+      "slug": "advanced-tabla-techniques",
+      "description": "Dive deep into complex taals, relas, and performance-level tabla compositions.",
+      "price": 3000,
+      "instructor": "Ustad Zakir Hussain",
+      "isFeatured": true,
+      "image": "/images/courses/tabla.png"
+    },
+    {
+      "id": 5,
+      "title": "Music Production with DAWs",
+      "slug": "music-production-with-daws",
+      "description": "Learn modern music production using DAWs, mixing basics, and sound design.",
+      "price": 4500,
+      "instructor": "A. R. Rahman",
+      "isFeatured": true,
+      "image": "/images/courses/music-production.png"
+    },
+    {
+      "id": 6,
+      "title": "Western Music Theory",
+      "slug": "western-music-theory",
+      "description": "Understand scales, modes, harmony, chord progressions, and composition techniques.",
+      "price": 2300,
+      "instructor": "Hans Zimmer",
+      "isFeatured": false,
+      "image": "/images/courses/music-theory.png"
+    },
+    {
+      "id": 7,
+      "title": "Flute for Meditation & Performance",
+      "slug": "flute-for-meditation-performance",
+      "description": "Learn bansuri techniques for both meditative playing and stage performance.",
+      "price": 2200,
+      "instructor": "Pandit Hariprasad Chaurasia",
+      "isFeatured": false,
+      "image": "/images/courses/flute.png"
+    },
+    {
+      "id": 8,
+      "title": "Drumming & Rhythm Mastery",
+      "slug": "drumming-rhythm-mastery",
+      "description": "Develop strong rhythm, timing, and groove with structured drum practice routines.",
+      "price": 2600,
+      "instructor": "Ringo Starr",
+      "isFeatured": false,
+      "image": "/images/courses/drums.png"
+    },
+    {
+      "id": 9,
+      "title": "Songwriting & Lyrics Craft",
+      "slug": "songwriting-lyrics-craft",
+      "description": "Write meaningful songs by mastering lyrics, melody writing, and emotional expression.",
+      "price": 2400,
+      "instructor": "Taylor Swift",
+      "isFeatured": true,
+      "image": "/images/courses/songwriting.png"
+    },
+    {
+      "id": 10,
+      "title": "Electronic Music & EDM Basics",
+      "slug": "electronic-music-edm-basics",
+      "description": "Create electronic music and EDM tracks with beats, synths, and drops.",
+      "price": 4200,
+      "instructor": "Deadmau5",
+      "isFeatured": false,
+      "image": "/images/courses/edm.png"
+    }
+  ]
+}
