@@ -8,7 +8,7 @@
       "price": 2500,
       "instructor": "Pandit Bhimsen Joshi",
       "isFeatured": true,
-      "image": "/images/courses/classical-vocal.png"
+      "image": "/courses/classical-vocal.jpg"
     },
     {
       "id": 2,
@@ -18,7 +18,7 @@
       "price": 2000,
       "instructor": "Eric Clapton",
       "isFeatured": true,
-      "image": "/images/courses/guitar-beginners.png"
+      "image": "/courses/guitar-beginners.jpg"
     },
     {
       "id": 3,
@@ -28,7 +28,7 @@
       "price": 2800,
       "instructor": "Ludovico Einaudi",
       "isFeatured": false,
-      "image": "/images/courses/piano.png"
+      "image": "/courses/piano.jpg"
     },
     {
       "id": 4,
@@ -38,7 +38,7 @@
       "price": 3000,
       "instructor": "Ustad Zakir Hussain",
       "isFeatured": true,
-      "image": "/images/courses/tabla.png"
+      "image": "/courses/tabla.jpg"
     },
     {
       "id": 5,
@@ -48,7 +48,7 @@
       "price": 4500,
       "instructor": "A. R. Rahman",
       "isFeatured": true,
-      "image": "/images/courses/music-production.png"
+      "image": "/courses/music-production.jpg"
     },
     {
       "id": 6,
@@ -58,7 +58,7 @@
       "price": 2300,
       "instructor": "Hans Zimmer",
       "isFeatured": false,
-      "image": "/images/courses/music-theory.png"
+      "image": "/courses/music-theory.jpg"
     },
     {
       "id": 7,
@@ -68,7 +68,7 @@
       "price": 2200,
       "instructor": "Pandit Hariprasad Chaurasia",
       "isFeatured": false,
-      "image": "/images/courses/flute.png"
+      "image": "/courses/flute.jpg"
     },
     {
       "id": 8,
@@ -77,8 +77,8 @@
       "description": "Develop strong rhythm, timing, and groove with structured drum practice routines.",
       "price": 2600,
       "instructor": "Ringo Starr",
-      "isFeatured": false,
-      "image": "/images/courses/drums.png"
+      "isFeatured": true,
+      "image": "/courses/drums.jpg"
     },
     {
       "id": 9,
@@ -88,7 +88,7 @@
       "price": 2400,
       "instructor": "Taylor Swift",
       "isFeatured": true,
-      "image": "/images/courses/songwriting.png"
+      "image": "/courses/songwriting.jpg"
     },
     {
       "id": 10,
@@ -98,7 +98,7 @@
       "price": 4200,
       "instructor": "Deadmau5",
       "isFeatured": false,
-      "image": "/images/courses/edm.png"
+      "image": "/courses/edm.jpg"
     }
   ]
 }

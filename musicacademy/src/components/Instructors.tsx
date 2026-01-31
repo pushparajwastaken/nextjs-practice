@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import { AnimatedTooltip } from "./ui/animated-tootip";
 import { WavyBackground } from "./ui/wavy-background";
 const people = [
@@ -35,7 +34,7 @@ const people = [
 export function Instructors() {
   return (
     <div className=" font-mono bg-white flex relative h-160 overflow-hidden items-center justify-center mb-10 w-full">
-      <WavyBackground className="w-fullmax-w-7xl mx-auto flex flex-col items-center justify-center h-full">
+      <WavyBackground className="w-full max-w-7xl mx-auto flex flex-col items-center justify-center h-full">
         <h2 className="text-2xl md:text-4xl lg:text-7xl text-white font-bold text-center mb-8">
           Meet Our Instructors
         </h2>
