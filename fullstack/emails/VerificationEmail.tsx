@@ -1,7 +1,6 @@
 import {
   Html,
   Head,
-  Font,
   Preview,
   Heading,
   Row,
@@ -23,17 +22,8 @@ export default function VerificationEmail({
     <Html lang="en" dir="ltr">
       <Head>
         <title>Verification Code</title>
-        <Font
-          fontFamily="Inter"
-          fallbackFontFamily="Arial"
-          webFont={{
-            url: "https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap",
-            format: "woff2",
-          }}
-        />
       </Head>
 
-      {/* Email preview text (shows in inbox snippet) */}
       <Preview>Your verification code is {otp}</Preview>
 
       <Section style={main}>
@@ -63,7 +53,6 @@ export default function VerificationEmail({
     </Html>
   );
 }
-
 /* ---------------- Styles ---------------- */
 
 const main = {

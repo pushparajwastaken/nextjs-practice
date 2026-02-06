@@ -24,7 +24,6 @@ export interface User extends Document {
   isVerified: Boolean;
   isAcceptingMessage: boolean;
   messages: Message[];
-  createdAt: Date;
 }
 const UserSchema: Schema<User> = new Schema({
   userName: {
@@ -60,11 +59,7 @@ const UserSchema: Schema<User> = new Schema({
     type: Boolean,
     default: true,
   },
-  createdAt: {
-    type: Date,
-    required: true,
-    default: Date.now,
-  },
+
   messages: [MessageSchema],
 });
 

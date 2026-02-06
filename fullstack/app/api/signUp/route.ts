@@ -56,7 +56,6 @@ export async function POST(request: Request) {
         isVerified: false,
         isAcceptingMessage: true,
         messages: [],
-        createdAt: Date.now(),
       });
       await newUser.save();
     }
