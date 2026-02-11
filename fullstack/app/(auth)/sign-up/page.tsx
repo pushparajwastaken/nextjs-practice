@@ -4,7 +4,7 @@ import { useForm, Controller, useFieldArray } from "react-hook-form";
 import * as z from "zod";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { useDebounceValue } from "usehooks-ts";
+import { useDebounceCallback, useDebounceValue } from "usehooks-ts";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import { ApiResponse } from "@/types/ApiResponse";
@@ -33,7 +33,7 @@ const page = () => {
   const [userNameMessage, setUserNameMessage] = useState("");
   const [isCheckingUserName, setIsCheckingUserName] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [debouncedUserName] = useDebounceValue(userName, 3000);
+  const debouncedUserName = useDebounceCallback(setUserName, 3000);
   //zod implementation
   const form = useForm<z.infer<typeof signUpSchema>>({
     resolver: zodResolver(signUpSchema),
@@ -45,12 +45,12 @@ const page = () => {
   });
   useEffect(() => {
     const checkUserNameUnique = async () => {
-      if (debouncedUserName) {
+      if (userName) {
         setIsCheckingUserName(true);
         setUserNameMessage("");
         try {
           const response = await axios.get(
-            `/api/checkUserNameUnique?userName=${debouncedUserName}`,
+            `/api/checkUserNameUnique?userName=${userName}`,
           );
           setUserNameMessage(response.data.message);
         } catch (error) {
@@ -64,7 +64,7 @@ const page = () => {
       }
     };
     checkUserNameUnique();
-  }, [debouncedUserName]);
+  }, [userName]);
   const onSubmit = async (data: z.infer<typeof signUpSchema>) => {
     setIsSubmitting(true);
     try {
@@ -110,9 +110,14 @@ const page = () => {
                         {...field}
                         onChange={(e) => {
                           field.onChange(e);
-                          setUserName(e.target.value);
+                          debouncedUserName(e.target.value);
                         }}
                       />
+                      <p
+                        className={`text-sm ${userNameMessage === "Username is unique" ? "text-green-500" : "text-red-500"}`}
+                      >
+                        {userNameMessage}
+                      </p>
                       {fieldState.invalid && (
                         <FieldError errors={[fieldState.error]} />
                       )}
@@ -170,7 +175,7 @@ const page = () => {
                     Please wait
                   </>
                 ) : (
-                  "Sign-in"
+                  "Sign-up"
                 )}
               </Button>
             </form>
