@@ -13,18 +13,12 @@ import { signUpSchema } from "@/schemas/signupSchema";
 import { Form } from "@/components/ui/form";
 import {
   Field,
-  FieldDescription,
   FieldError,
   FieldGroup,
   FieldLabel,
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupText,
-  InputGroupTextarea,
-} from "@/components/ui/input-group";
+
 import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
 const page = () => {
