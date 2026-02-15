@@ -7,6 +7,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useSession } from "next-auth/react";
 import { useCallback, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+import { Input } from "@/components/ui/input";
+import { Copy } from "lucide-react";
 
 import axios, { AxiosError } from "axios";
 import { ApiResponse } from "@/types/ApiResponse";
@@ -80,6 +82,18 @@ const Page = () => {
       setIsLoading(false);
     }
   }, []);
+  const profileUrl = `${window.location.origin}/u/${session?.user.userName}`;
+  const handleCopyLink = async () => {
+    try {
+      await navigator.clipboard.writeText(profileUrl);
+
+      toast("Link copied!", {
+        description: "Share it anywhere 🎉",
+      });
+    } catch {
+      toast("Failed to copy link");
+    }
+  };
 
   // 🔹 Toggle Accept Messages
   const handleSwitchChange = async () => {
@@ -140,6 +154,24 @@ const Page = () => {
             onCheckedChange={handleSwitchChange}
           />
         )}
+      </div>
+
+      <Separator />
+      {/* 🔹 Share Link Section */}
+      <div className="space-y-2">
+        <h2 className="text-lg font-semibold">Your Anonymous Link</h2>
+
+        <div className="flex gap-2">
+          <Input value={profileUrl} readOnly />
+
+          <Button onClick={handleCopyLink} size="icon">
+            <Copy className="h-4 w-4" />
+          </Button>
+        </div>
+
+        <p className="text-sm text-muted-foreground">
+          Share this link to receive anonymous messages
+        </p>
       </div>
 
       <Separator />
