@@ -7,8 +7,8 @@ dbConnect();
 
 export async function POST(req: NextRequest) {
   try {
-    const reqBody = req.json();
-    const { username, email, password }: any = reqBody;
+    const reqBody = await req.json();
+    const { username, email, password } = reqBody;
     console.log("reqBody: ", reqBody);
     const user = await User.findOne({ email });
     if (user) {
@@ -32,12 +32,12 @@ export async function POST(req: NextRequest) {
     console.log("Saved User: ", savedUser);
     //sendVerificationMail
     await sendEmail({ email, emailType: "VERIFY", userId: savedUser._id });
-return NextResponse.json({
-    message:"User registered Successfully"
-    success:true,
-    savedUser
-}) 
-} catch (error: any) {
+    return NextResponse.json({
+      message: "User registered Successfully",
+      success: true,
+      savedUser,
+    });
+  } catch (error: any) {
     return NextResponse.json(
       {
         error: error.message,
