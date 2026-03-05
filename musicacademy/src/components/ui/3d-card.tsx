@@ -9,10 +9,10 @@ import React, {
   useRef,
   useEffect,
 } from "react";
-
-const MouseEnterContext =
-  createContext[(boolean, React.Dispatch<React.SetStateAction<boolean>>)] |
-  (undefined > undefined);
+type MouseEnterContextType =
+  | [boolean, React.Dispatch<React.SetStateAction<boolean>>]
+  | undefined;
+const MouseEnterContext = createContext<MouseEnterContextType>(undefined);
 
 export const CardContainer = ({
   children,
