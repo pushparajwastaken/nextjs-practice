@@ -1,5 +1,4 @@
 "use client";
-import { div } from "motion/react-client";
 import { StickyScroll } from "./ui/sticky-scroll-reveal";
 const musicschoolContent = [
   {
