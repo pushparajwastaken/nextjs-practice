@@ -95,8 +95,7 @@ export const CardBody = ({
   );
 };
 
-type CardItemProps = {
-  as?: React.ElementType;
+interface CardItemProps extends Record<string, any> {
   children: React.ReactNode;
   className?: string;
   translateX?: number | string;
@@ -105,7 +104,7 @@ type CardItemProps = {
   rotateX?: number | string;
   rotateY?: number | string;
   rotateZ?: number | string;
-} & Record<string, unknown>;
+}
 export const CardItem = ({
   as: Tag = "div",
   children,
